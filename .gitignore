@@ -1,0 +1,6 @@
+.DS_Store
+pip-log.txt
+*.pyc
+*~
+*.bak
+settings_local.py
