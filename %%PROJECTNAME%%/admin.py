@@ -8,7 +8,7 @@ Admin configuration for for %%PROJECTNAME%%.
 ### SAMPLE CODE FOLLOWS
 
 from django.contrib import admin
-from %%PROJECTNAME%%.models import Auftrag, AuftragsPosition
+from %%MODULENAME%%.models import Auftrag, AuftragsPosition
 
 
 class AuftragsPositionInline(admin.StackedInline):

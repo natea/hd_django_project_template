@@ -18,7 +18,7 @@ firstdeploy:
 
 livedb_to_test:
 	# copies database from the live system onto your box
-	scp root@$(PROJECTDNS):/var/lib/silverlining/apps/%%PROJECTNAME%%/%%PROJECTNAME%%.db ~/.silverlining-app-data/files/%%PROJECTNAME%%/%%PROJECTNAME%%.db
+	scp root@$(PROJECTDNS):/var/lib/silverlining/apps/%%PROJECTNAME%%/%%MODULENAME%%.db ~/.silverlining-app-data/files/%%PROJECTNAME%%/%%MODULENAME%%.db
 
 setup: dependencies
 	../../bin/python ../../bin/manage.py syncdb --noinput
@@ -33,4 +33,4 @@ clean:
 	find . -name '*.pyc' -or -name '*.pyo' | xargs rm
 
 test:
-	python manage.py test --verbosity=1 %%PROJECTNAME%%
+	python manage.py test --verbosity=1 %%MODULENAME%%

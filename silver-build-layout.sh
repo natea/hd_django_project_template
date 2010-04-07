@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DIR="$1"
-PROJECT="%%PROJECTNAME%%"
+PROJECT="%%MODULENAME%%"
 
 if [ -z "$DIR" ] ; then
     echo "$(basename $0) DIR"

@@ -27,11 +27,11 @@ urlpatterns = patterns('',
 
 # include %%PROJECTNAME%%
 (r'^%%PROJECTNAME%%/', include('%%PROJECTNAME%%.urls')),
-(r'^$', 'django.views.generic.simple.redirect_to', {'url' : '/%%PROJECTNAME%%/'}),
+(r'^$', 'django.views.generic.simple.redirect_to', {'url' : '/%%MODULENAME%%/'}),
 )
 
 # when in development mode, serve static files 'by hand'
-# in production the files should be placed at http://s.hdimg.net/%%PROJECTNAME%%/
+# in production the files should be placed at http://s.hdimg.net/%%MODULENAME%%/
 if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': './media'}),

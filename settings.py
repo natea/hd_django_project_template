@@ -28,7 +28,7 @@ if DEBUG:
 else:
     SEND_BROKEN_LINK_EMAILS = True
 
-MEDIA_URL = 'http://s.hdimg.net/%%PROJECTNAME%%/'
+MEDIA_URL = 'http://s.hdimg.net/%%MODULENAME%%/'
 # for development you can use something like this:
 # MEDIA_URL = '/media/'
 
@@ -43,7 +43,7 @@ if not os.environ.get('SILVER_VERSION', '').startswith('silverlining/'):
     GOOGLE_OPENID_REALM = 'http://127.0.0.1:8080/'
 
 DATABASE_ENGINE = 'sqlite3'
-DATABASE_NAME = os.path.join(os.environ['CONFIG_FILES'], '%%PROJECTNAME%%.db')
+DATABASE_NAME = os.path.join(os.environ['CONFIG_FILES'], '%%MODULENAME%%.db')
 
 DATETIME_FORMAT = 'Y-m-d H:i:s'
 DATE_FORMAT = 'Y-m-d'
