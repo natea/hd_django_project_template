@@ -34,5 +34,5 @@ urlpatterns = patterns('',
 # in production the files should be placed at http://s.hdimg.net/%%MODULENAME%%/
 if settings.DEBUG:
     urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': './media'}),
+        (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': './media'}),
     )

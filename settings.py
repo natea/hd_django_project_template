@@ -14,7 +14,6 @@ OUR_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 # HUDORA specific config
 from cs.global_django_settings import *
-from settings_local import *
 
 DEBUG = True
 if os.environ.get('SILVER_VERSION', '').startswith('silverlining/'):
@@ -47,3 +46,8 @@ DATABASE_NAME = os.path.join(os.environ['CONFIG_FILES'], '%%MODULENAME%%.db')
 
 DATETIME_FORMAT = 'Y-m-d H:i:s'
 DATE_FORMAT = 'Y-m-d'
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
