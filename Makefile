@@ -23,12 +23,16 @@ livedb_to_test:
 setup: dependencies
 	../../bin/python ../../bin/manage.py syncdb --noinput
 
-dependencies: generic_templates
+dependencies: update_templates
 	../../bin/pip -q install -r ./requirements.txt
 
+update_templates: generic_templates
+	cd html ; git pull ; cd -
+	
 generic_templates:
-	git clone git@github.com:hudora/html.git generic_templates
-
+	git clone git@github.com:hudora/html.git html
+	ln -s html/templates generic_templates
+			
 clean:
 	find . -name '*.pyc' -or -name '*.pyo' | xargs rm
 
