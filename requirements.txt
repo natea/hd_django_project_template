@@ -1,6 +1,6 @@
 # add names of required Python modules here
 Django>=1.1
 python-memcached
-http://effbot.org/downloads/Imaging-1.1.6.tar.gz
+http://effbot.org/downloads/Imaging-1.1.7.tar.gz
 -e git+ssh://git@github.com/hudora/hudoratools#egg=hudoratools
 -e git+ssh://git@github.com/hudora/CentralServices#egg=cs
